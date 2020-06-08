@@ -37,26 +37,13 @@
 
     //3. Generate a loop in order to last the number of times that the user entered in the prompt.            
                 for (let i = 0; i < quotesNumber; i++) {
-                    let randomIndex1 = Math.floor((Math.random() * (quote1.length)));
-                    let randomIndex2 = Math.floor((Math.random() * (quote2.length)));
-                    let randomIndex3 = Math.floor((Math.random() * (quote3.length)));
-                    let string1 = quote1[randomIndex1];
-                    let string2 = quote2[randomIndex2];
-                    let string3 = quote3[randomIndex3];
-                 console.log(`${string1}, ${string2},${string3}`)   
+                    quotesGen()
                 };
            }else {
             return "Not a valid number"
         };
 }genQuotesNum();
 
-
-
-/* Choose between 2 types of quotation generators (you should therefore have 2 sets of sentences)
-
-Once the quotes have been generated, offer to generate new quotes or stop the program there
-
-Adapt the program so that it can offer these features. It's your turn !*/
 
 // Second type of the exercise
 
