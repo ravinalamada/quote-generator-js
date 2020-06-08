@@ -26,7 +26,7 @@
     console.log(`${newRandomNumber1}, ${newRandomNumber2}, ${newRandomNumber3}`);
     };quotesGen();
 
-    /* Creat a function
+    // Creat a function
       function genQuotesNum() {
 
     //1. I creat prompt in order to interact with a user and choose number of quotes generated (from 1 to 5)
@@ -50,7 +50,7 @@
         };
 }genQuotesNum();
 
-*/
+
 
 /* Choose between 2 types of quotation generators (you should therefore have 2 sets of sentences)
 
