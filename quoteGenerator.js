@@ -9,7 +9,7 @@
            let quote3 = ["It does not matter how slowly you go as long as you do not stop.","Believe you can and you're halfway there", "Theodore Roosevelt"]
     
 
-    /* I creat a function in order to conctenate the strings
+     //I creat a function in order to conctenate the strings
 
     function quotesGen() {
         let randomNumber1 = Math.floor((Math.random() * (quote1.length)));
@@ -25,7 +25,7 @@
     //  console the code
     console.log(`${newRandomNumber1}, ${newRandomNumber2}, ${newRandomNumber3}`);
     };quotesGen();
-*/
+
     // Generate a function
 
     function genQuotesNum() {
@@ -36,14 +36,13 @@
     //2. check if the prompt give us something between 1 and 5
             if (quotesNumber > 1 && quotesNumber < 5) {
     //3. Generate a loop in order to last the number of times that the user entered in the prompt.            
-                for (let i = 1; i < 5; i++) {
+                for (let i = 0; i < quotesNumber; i++) {
                     let randomIndex1 = Math.floor((Math.random() * (quote1.length)));
                     let randomIndex2 = Math.floor((Math.random() * (quote2.length)));
                     let randomIndex3 = Math.floor((Math.random() * (quote3.length)));
                     let string1 = quote1[randomIndex1];
                     let string2 = quote2[randomIndex2];
                     let string3 = quote3[randomIndex3];
-
                  console.log(`${string1}, ${string2},${string3}`)   
                 };
            }else {
