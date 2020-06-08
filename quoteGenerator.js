@@ -47,22 +47,22 @@
 
 // Second type of the exercise
 
-    let newQuote1 = ["Let's have a break", "I have been waiting for that for a long time"];
+    let newQuote1 = ["Let us have a break", "I have been waiting for that for a long time"];
     let newQuote2 = ['Bravo, you got this', 'Yep, as you see'];
-    let newQuote3 = ["Let's have a break", "I have been waiting for that for a long time"]
+    let newQuote3 = ['Let us have a break', 'I have been waiting for that for a long time']
 
     // Let's have another function 
 
     function optionQuoteGen() {
 
     // GEnerate a prompt in order to ask the user which type of quotation they want to use   
-        let quotestypes = prompt("Choose your type of quotes here");
+        let quotestype = prompt("Choose your type of quotes here");
 
-            if (quotestypes < 2) {
+            if (quotestype < 2) {
                 let otherRandoIndex1 = Math.floor((Math.random() * (newQuote1.length)));
                 let newString1 = newQuote1[otherRandoIndex1];
                 console.log(`${newString1}`)
-            }else if(quotestypes >= 2) {
+            }else if(quotestype >= 2) {
                 let otherRandomIndex2 = Math.floor((Math.random() * (newQuote2.length)));
                 let newString2 = newQuote2[otherRandomIndex2];
                 let otherRandomIndex3 = Math.floor((Math.random() * (newQuote3.length)));
