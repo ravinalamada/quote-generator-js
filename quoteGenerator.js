@@ -30,10 +30,10 @@
       function genQuotesNum() {
 
     //1. I creat prompt in order to interact with a user and choose number of quotes generated (from 1 to 5)
-    let quotesNumber = prompt("Choose your number of quotes here,'1' ");
+    let quotesNumber = prompt("Choose number of quotes which you want to generate here,(from 1 to 5) ");
 
     //2. check if the prompt give us something between 1 and 5
-            if (quotesNumber > 1 && quotesNumber < 5) {
+            if (quotesNumber >= 1 && quotesNumber < 5) {
 
     //3. Generate a loop in order to last the number of times that the user entered in the prompt.            
                 for (let i = 0; i < quotesNumber; i++) {
@@ -47,28 +47,42 @@
 
 // Second type of the exercise
 
-    let newQuote1 = ["Let us have a break", "I have been waiting for that for a long time"];
-    let newQuote2 = ['Bravo, you got this', 'Yep, as you see'];
-    let newQuote3 = ['Let us have a break', 'I have been waiting for that for a long time']
+    let happyQuotes = ["Let us have a break", 
+                       "I have been waiting for that for a long time", 
+                       "Bravo, you got this", "Yep, as you see"
+                      ];
+    let sadQuotes = ["Do not cry", 
+                     "You will get there", 
+                     "Cheer up"];
+              
+    let cheeringQuotes =  ["Do not cry", 
+                            "You will get there", 
+                            "Cheer up"];                
 
     // Let's have another function 
 
-    function optionQuoteGen() {
-
+    const optionQuoteGen = () => {
+        let otherRandoIndex1 = Math.floor((Math.random() * (happyQuotes.length)));
+        let newString1 = happyQuotes[otherRandoIndex1];
+        let otherRandomIndex2 = Math.floor((Math.random() * (sadQuotes.length)));
+        let newString2 = sadQuotes[otherRandomIndex2];
+        let otherRandomIndex3 = Math.floor((Math.random() * (cheeringQuotes.length)));
+        let newString3 = sadQuotes[otherRandomIndex3];
+        let randomQuotes = `${newString1} ${newString2} ${newString3}`;
+        console.log(randomQuotes)
+    }
+       
     // GEnerate a prompt in order to ask the user which type of quotation they want to use   
-        let quotestype = prompt("Choose your type of quotes here");
+        let quotesType = prompt("Choose your type of quotes here");
+            while (quotesType < 2 || quotesType >= 2 ) {
+              quotesType = Number(prompt("Do you want to continue, Yes/No"))
+              let Yes;
+              if(quotesType === Yes && quotesType < 2) {
+                 quotesGen()
+              }else if(quotesType === Yes && quotesType >=2) {
+                  optionQuoteGen()
+              };
+            };     
 
-            if (quotestype < 2) {
-                let otherRandoIndex1 = Math.floor((Math.random() * (newQuote1.length)));
-                let newString1 = newQuote1[otherRandoIndex1];
-                console.log(`${newString1}`)
-            }else if(quotestype >= 2) {
-                let otherRandomIndex2 = Math.floor((Math.random() * (newQuote2.length)));
-                let newString2 = newQuote2[otherRandomIndex2];
-                let otherRandomIndex3 = Math.floor((Math.random() * (newQuote3.length)));
-                let newString3 = newQuote3[otherRandomIndex3];
-                console.log(`${newString2}, ${newString3}`);
-            };  
 
-    }optionQuoteGen();
-
+    
