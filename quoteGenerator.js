@@ -57,32 +57,49 @@
               
     let cheeringQuotes =  ["Do not cry", 
                             "You will get there", 
-                            "Cheer up"];                
+                            "Cheer up"
+                        ];                
 
     // Let's have another function 
 
     const optionQuoteGen = () => {
-        let otherRandoIndex1 = Math.floor((Math.random() * (happyQuotes.length)));
-        let newString1 = happyQuotes[otherRandoIndex1];
+        let quotesType = prompt("Choose your type of quotes here"); 
+
+        let otherRandomIndex1 = Math.floor((Math.random() * (happyQuotes.length)));
+        let newString1 = happyQuotes[otherRandomIndex1];
+        let randomQuotes1 = `${newString1}`;
+        
         let otherRandomIndex2 = Math.floor((Math.random() * (sadQuotes.length)));
         let newString2 = sadQuotes[otherRandomIndex2];
         let otherRandomIndex3 = Math.floor((Math.random() * (cheeringQuotes.length)));
-        let newString3 = sadQuotes[otherRandomIndex3];
-        let randomQuotes = `${newString1} ${newString2} ${newString3}`;
-        console.log(randomQuotes)
-    }
+        let newString3 = cheeringQuotes[otherRandomIndex3];
+        let randomQuotes2 = `${newString2} ${newString3}`;
+        
+        if (quotesType < 2) {
+            console.log(`${randomQuotes1}`);
+        }else if  (quotesType >= 2) {
+            console.log(`${randomQuotes2}`)
+    };
+};optionQuoteGen()
        
-    // GEnerate a prompt in order to ask the user which type of quotation they want to use   
-        let quotesType = prompt("Choose your type of quotes here");
-            while (quotesType < 2 || quotesType >= 2 ) {
-              quotesType = Number(prompt("Do you want to continue, Yes/No"))
-              let Yes;
-              if(quotesType === Yes && quotesType < 2) {
-                 quotesGen()
-              }else if(quotesType === Yes && quotesType >=2) {
-                  optionQuoteGen()
-              };
-            };     
+    // GEnerate a prompt in order to ask the user which type of quotation they want to use
+           
+        
+    
+                   
+           /*let booleanTypes = Number(prompt("Do you want to continue, Yes/No"));
+           let boolean = "Yes";
+            while (boolean === "Yes") {
+              quotesType = prompt("Choose your type of quotes here");
+              if (quotesType < 2) {
+                quotesGen()
+            }else if (quotesType >= 2) {
+                optionQuoteGen()
+            } else {
+                console.log(`Not valid`)
+            }
+        };*/
+              
 
 
     
